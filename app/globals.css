@@ -9,8 +9,21 @@
 */
 @theme {
   /* Fonty */
+  --animate-spotlight: spotlight 2s ease .75s 1 forwards;
+
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%,-40%) scale(1);
+    }
+  }
+
   --font-heading: var(--font-heading);
-  --font-sans: var(--font-body);
+  --font-body: var(--font-sans);
   --font-mono: var(--font-mono);
 
   /* Kolory - mapujemy zmienne CSS na klasy Tailwinda (np. bg-primary) */
@@ -37,21 +50,22 @@
   /* Tło: Głęboki Zinc (prawie czarny, ale cieplejszy) */ /* Odpowiednik zinc-950 */        /* Złamana biel */
 
   /* Karty (Bento Grid) */
-  --card: oklch(1 0 0);       /* Troszkę jaśniejszy zinc */
-  --card-foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(0.17 0.006 285.8);       /* Troszkę jaśniejszy zinc */
+  --card-foreground: oklch(0.985 0 0);
 
   /* Primary: Indigo (Twoja główna barwa) */
-  --primary: oklch(0.21 0.006 285.885);        /* Intensywny fiolet/indigo */
-  --primary-foreground: oklch(0.985 0 0);    /* Biały tekst na przycisku */
+  --primary: oklch(0.6 0.18 270);        /* Intensywny fiolet/indigo */
+  --primary-foreground: oklch(1 0 0);    /* Biały tekst na przycisku */
 
   /* Accent: Cyan (do "glowing effects") */
-  --accent: oklch(0.967 0.001 286.375);
+  --accent: oklch(0.7 0.15 190);
 
   /* Border: Ciemny szary */
-  --border: oklch(0.92 0.004 286.32);
+
+  --border: oklch(0.27 0.006 285.8);
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
+  --background: oklch(0.14 0.005 285.8); /* Odpowiednik zinc-950 */
+  --foreground: oklch(0.985 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
   --secondary: oklch(0.967 0.001 286.375);
@@ -132,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ---break---
 */
 
-.dark {
+/*.dark {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -165,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
-
+*/
 /* ---break---
 */
 

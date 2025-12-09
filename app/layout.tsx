@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
 
 // Definicja fontów
 const fontHeading = Plus_Jakarta_Sans({
@@ -37,6 +38,7 @@ export default function RootLayout({
         <body
             className={`${fontHeading.variable} ${fontBody.variable} ${fontMono.variable} antialiased bg-background text-foreground`}
         >
+        <Navbar />
         {children}
         </body>
         </html>
