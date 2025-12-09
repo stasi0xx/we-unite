@@ -8,9 +8,6 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
     { name: "Rozwiązania", href: "#features" },
-    { name: "O nas", href: "#about" },
-    { name: "Cennik", href: "#pricing" },
-    { name: "Case Studies", href: "#cases" },
 ];
 
 export const Navbar = () => {

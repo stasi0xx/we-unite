@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
+import {CookieConsent} from "@/components/CookieConsent";
 
 // Definicja fontów
 const fontHeading = Plus_Jakarta_Sans({
@@ -40,6 +41,7 @@ export default function RootLayout({
         >
         <Navbar />
         {children}
+        <CookieConsent />
         </body>
         </html>
     );

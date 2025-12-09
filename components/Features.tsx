@@ -1,7 +1,7 @@
 "use client";
 
 import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons";
-import { BellIcon, Share2Icon, Zap, Bot, MessageCircle } from "lucide-react";
+import { BellIcon, Share2Icon, Zap, Bot, MessageCircle, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { AnimatedList } from "@/components/ui/animated-list";
@@ -126,19 +126,24 @@ const features = [
         ),
     },
     {
-        Icon: FileTextIcon,
-        name: "Inteligentna Baza Wiedzy",
-        description: "AI uczy się na podstawie Twoich plików i dokumentów.",
+        Icon: Globe,
+        name: "Inteligentne strony",
+        description: "Tworzymy szybkie strony Next.js, które same sprzedają. Zobacz nasze realizacje.",
         href: "#",
-        cta: "Więcej",
+        cta: "Zobacz portfolio",
         className: "col-span-3 lg:col-span-1",
         background: (
-            <div className="absolute top-10 w-full opacity-50 [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)]">
-                {/* Tutaj można wstawić prosty obrazek lub Marquee z plikami */}
-                <div className="p-4 border rounded-xl bg-white/5 mx-6">
-                    <div className="h-4 w-2/3 bg-zinc-700 rounded mb-2 animate-pulse" />
-                    <div className="h-4 w-1/2 bg-zinc-700 rounded animate-pulse delay-75" />
-                </div>
+            <div className="absolute top-10 w-full h-full [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] overflow-hidden rounded-xl">
+                {/* POPRAWIONE ZDJĘCIE */}
+                <img
+                    src="/case1.webp"
+                    alt="Nasze realizacje"
+                    // Zmiany:
+                    // 1. Usunięto w-[110%] i right-[-20px] -> obraz jest teraz wewnątrz kontenera
+                    // 2. object-cover -> wypełnia cały obszar
+                    // 3. object-top -> kadruje od góry (pokazuje najważniejszą część Twojego hero)
+                    className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-500 border-t border-white/10"
+                />
             </div>
         ),
     },
