@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { Twitter, Linkedin, Github, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Twitter, Linkedin, Github, Facebook,Instagram , Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import React from "react";
 
 export const Footer = () => {
     return (
@@ -13,12 +15,13 @@ export const Footer = () => {
                 {/* KOLUMNA 1: LOGO I OPIS */}
                 <div className="space-y-4">
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center shadow-[0_0_15px_-3px_var(--primary)]">
-                            <span className="font-bold text-white text-xs">WU</span>
-                        </div>
-                        <span className="font-bold text-lg tracking-wide text-white">
-              WeUnite
-            </span>
+                        <Image
+                            src="/logo.png" // <-- Ścieżka do Twojego pliku w folderze public
+                            alt="WeUnite AI Logo"
+                            width={100}
+                            height={50}
+                            className="object-contain p-0.5" // p-0.5 dodaje mini margines, żeby nie dotykało krawędzi
+                        />
                     </Link>
                     <p className="text-zinc-500 text-sm leading-relaxed max-w-xs">
                         Tworzymy systemy, które pracują, gdy Ty śpisz. Automatyzacja, AI i nowoczesne strony WWW dla Twojego biznesu.
@@ -30,6 +33,7 @@ export const Footer = () => {
                         <SocialLink href="#" icon={<Linkedin size={18} />} />
                         <SocialLink href="#" icon={<Github size={18} />} />
                         <SocialLink href="#" icon={<Facebook size={18} />} />
+                        <SocialLink href="https://www.instagram.com/muwe?igsh=eDF5NHIzZGt3Nnd6" icon={<Instagram size={18} />} />
                     </div>
                 </div>
 
@@ -91,6 +95,7 @@ export const Footer = () => {
 const SocialLink = ({ href, icon }: { href: string; icon: React.ReactNode }) => (
     <a
         href={href}
+        target={'_blank'}
         className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-zinc-400 hover:bg-white/10 hover:text-white hover:border-white/20 transition-all duration-300"
     >
         {icon}

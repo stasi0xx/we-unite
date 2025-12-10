@@ -8,7 +8,7 @@ import { Database, Zap, Bot, Layers } from "lucide-react";
 
 const Hero = () => {
     return (
-        <main className="relative min-h-screen w-full flex flex-col items-center justify-start md:justify-center overflow-hidden bg-background pt-32 md:pt-0 pb-12">
+        <main className="relative min-h-screen w-full flex flex-col items-center justify-start md:justify-center overflow-hidden bg-background pt-32 md:pt-10 pb-12">
 
             {/* TŁO: GRID I SPOTLIGHT */}
             <InteractiveGridPattern
@@ -43,9 +43,9 @@ const Hero = () => {
                             Automatyzacja
                         </TextAnimate>
                     </span>
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
-                        Dla Twojej Firmy
-                    </span>
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400">
+    Dla Twojej Firmy
+</span>
                 </h1>
 
                 {/* OPIS */}
@@ -57,10 +57,6 @@ const Hero = () => {
                 <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full sm:w-auto">
                     <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-xl font-bold transition shadow-[0_0_20px_-5px_var(--primary)] cursor-pointer w-full sm:w-auto">
                         Rozpocznij Projekt
-                    </button>
-
-                    <button className="border border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-md text-white px-8 py-3 rounded-xl font-medium transition cursor-pointer w-full sm:w-auto">
-                        Zobacz Demo
                     </button>
                 </div>
             </div>

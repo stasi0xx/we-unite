@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -21,12 +22,13 @@ export const Navbar = () => {
 
                     {/* LOGO */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center shadow-[0_0_15px_-3px_var(--primary)] group-hover:shadow-[0_0_20px_-3px_var(--primary)] transition-all">
-                            <span className="font-bold text-white text-xs">WU</span>
-                        </div>
-                        <span className="font-bold text-sm tracking-wide text-zinc-100 group-hover:text-white transition-colors">
-              WeUnite
-            </span>
+                        <Image
+                            src="/logo.png" // <-- Ścieżka do Twojego pliku w folderze public
+                            alt="WeUnite AI Logo"
+                            width={70}
+                            height={35}
+                            className="object-contain p-0.5" // p-0.5 dodaje mini margines, żeby nie dotykało krawędzi
+                        />
                     </Link>
 
                     {/* DESKTOP MENU (Ukryte na mobile) */}
