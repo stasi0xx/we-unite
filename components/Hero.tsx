@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
 import { cn } from "@/lib/utils";
@@ -5,6 +7,8 @@ import { Spotlight } from "@/components/ui/spotlight-new";
 import { TextAnimate } from "@/components/ui/text-animate";
 // Importujemy ikony z lucide-react (upewnij się, że masz tę paczkę, jest standardowa w shadcn)
 import { Database, Zap, Bot, Layers } from "lucide-react";
+import Image from "next/image";
+import {motion} from "framer-motion";
 
 const Hero = () => {
     return (
@@ -37,16 +41,22 @@ const Hero = () => {
                 </div>
 
                 {/* NAGŁÓWEK */}
-                <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold leading-tight">
-                    <span className="text-white block mb-2">
-                        <TextAnimate animation="blurInUp" by="character">
-                            Automatyzacja
-                        </TextAnimate>
-                    </span>
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400">
-    Dla Twojej Firmy
-</span>
-                </h1>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="relative w-full max-w-[400px] md:max-w-[600px] h-auto my-4"
+                >
+                    {/* Upewnij się, że plik logo.png w folderze public jest wysokiej jakości i ma przezroczyste tło */}
+                    <Image
+                        src="/hero-logo.png"
+                        alt="We Unite Logo"
+                        width={800}
+                        height={300}
+                        priority
+                        className="w-full h-auto object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]"
+                    />
+                </motion.div>
 
                 {/* OPIS */}
                 <p className="text-base md:text-xl text-zinc-400 font-sans max-w-2xl leading-relaxed">

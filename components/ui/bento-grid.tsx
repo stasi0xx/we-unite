@@ -1,78 +1,78 @@
-"use client"; // Wymagane dla framer-motion
+"use client";
 
 import { ReactNode } from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-import { motion, Variants } from "framer-motion"; // Importujemy silnik animacji
+import { motion, Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link"; // <--- Importujemy Link z Next.js
 
-// Konfiguracja animacji (Variants)
 const gridVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1, // Opóźnienie między kolejnymi kafelkami (0.1s)
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+        },
     },
-  },
 };
 
 const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95 }, // Start: lekko przesunięte w dół i mniejsze
-  show: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 20
-    }
-  },
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    show: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: {
+            type: "spring",
+            stiffness: 100,
+            damping: 20
+        }
+    },
 };
 
 const BentoGrid = ({
-                     children,
-                     className,
+                       children,
+                       className,
                    }: {
-  children: ReactNode;
-  className?: string;
+    children: ReactNode;
+    className?: string;
 }) => {
-  return (
-      <motion.div
-          variants={gridVariants}
-          initial="hidden"
-          whileInView="show" // Animacja odpala się, gdy element wejdzie w viewport
-          viewport={{ once: true, margin: "-100px" }} // once: true -> animuje tylko raz, margin -> bufor
-          className={cn(
-              "grid w-full auto-rows-[22rem] grid-cols-3 gap-4",
-              className,
-          )}
-      >
-        {children}
-      </motion.div>
-  );
+    return (
+        <motion.div
+            variants={gridVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            className={cn(
+                "grid w-full auto-rows-[22rem] grid-cols-3 gap-4",
+                className,
+            )}
+        >
+            {children}
+        </motion.div>
+    );
 };
 
 const BentoCard = ({
-                     name,
-                     className,
-                     background,
-                     Icon,
-                     description,
-                     href,
-                     cta,
+                       name,
+                       className,
+                       background,
+                       Icon,
+                       description,
+                       href,
+                       cta,
                    }: {
-  name: string;
-  className: string;
-  background: ReactNode;
-  Icon: any;
-  description: string;
-  href: string;
-  cta: string;
+    name: string;
+    className: string;
+    background: ReactNode;
+    Icon: any;
+    description: string;
+    href: string;
+    cta: string;
 }) => (
     <motion.div
-        variants={cardVariants} // Przypisujemy wariant animacji pojedynczej karty
+        variants={cardVariants}
         key={name}
         className={cn(
             "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
@@ -83,28 +83,36 @@ const BentoCard = ({
             className,
         )}
     >
-      <div>{background}</div>
-      <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-        <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75 dark:text-neutral-300" />
-        <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-          {name}
-        </h3>
-        <p className="max-w-lg text-neutral-400">{description}</p>
-      </div>
+        {/* --- ZMIANA: Overlay Link ---
+        Ten link przykrywa całą kartę (z-20), dzięki czemu kliknięcie gdziekolwiek przenosi użytkownika.
+    */}
+        <Link href={href} className="absolute inset-0 z-20" aria-label={`Przejdź do ${name}`} />
 
-      <div
-          className={cn(
-              "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
-          )}
-      >
-        <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
-          <a href={href}>
-            {cta}
-            <ArrowRightIcon className="ml-2 h-4 w-4" />
-          </a>
-        </Button>
-      </div>
-      <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
+        <div>{background}</div>
+
+        <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
+            <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75 dark:text-neutral-300" />
+            <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+                {name}
+            </h3>
+            <p className="max-w-lg text-neutral-400">{description}</p>
+        </div>
+
+        <div
+            className={cn(
+                "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
+            )}
+        >
+            {/* --- ZMIANA: Przycisk wizualny ---
+          Usunęliśmy tag <a> ze środka i asChild. Teraz to tylko stylizacja,
+          a kliknięcie obsługuje główny Link (overlay) powyżej.
+      */}
+            <Button variant="ghost" size="sm" className="pointer-events-none">
+                {cta}
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
+            </Button>
+        </div>
+        <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
     </motion.div>
 );
 

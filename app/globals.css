@@ -4,6 +4,23 @@
 */
 @custom-variant dark (&:is(.dark *));
 
+@theme inline {
+  /* ... twoje istniejące zmienne ... */
+
+  --animate-marquee: marquee var(--duration) linear infinite;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }
+  }
+
+  @keyframes marquee-vertical {
+    from { transform: translateY(0); }
+    to { transform: translateY(calc(-100% - var(--gap))); }
+  }
+}
+
 /* W TW v4 definiujemy temat bezpośrednio w CSS.
   Mapujemy nasze zmienne z Next.js (--font-heading) na klasy użytkowe Tailwinda (font-heading).
 */
