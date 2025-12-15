@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="last">
-      <change afterPath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/hero-visualizer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/marquee.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/offers-data.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/page2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/page3.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Features.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Features.tsx" afterDir="false" />
+    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/bento-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/bento-grid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +105,7 @@
       <workItem from="1765309147388" duration="6398000" />
       <workItem from="1765315609453" duration="9186000" />
       <workItem from="1765400132496" duration="18000" />
-      <workItem from="1765823208278" duration="6305000" />
+      <workItem from="1765823208278" duration="6999000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -175,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765324864445</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="updates">
+      <option name="closed" value="true" />
+      <created>1765830690963</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765830690963</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +184,7 @@
     <MESSAGE value="Feature section bugges" />
     <MESSAGE value="first final" />
     <MESSAGE value="last" />
-    <option name="LAST_COMMIT_MESSAGE" value="last" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
 </project>

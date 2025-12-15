@@ -36,9 +36,6 @@ const Hero = () => {
             <div className="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto text-center px-4">
 
                 {/* BADGE */}
-                <div className="font-mono text-[10px] md:text-xs text-accent uppercase tracking-widest mb-2 border border-white/10 px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm">
-                    Next.js 16 + Tailwind 4
-                </div>
 
                 {/* NAGŁÓWEK */}
                 <motion.div
