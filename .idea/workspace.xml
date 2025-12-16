@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="updates">
+    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="navbar and hero">
+      <change afterPath="$PROJECT_DIR$/components/ui/floating-navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +110,7 @@
       <workItem from="1765309147388" duration="6398000" />
       <workItem from="1765315609453" duration="9186000" />
       <workItem from="1765400132496" duration="18000" />
-      <workItem from="1765823208278" duration="6999000" />
+      <workItem from="1765823208278" duration="11008000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -171,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765830690963</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updates">
+      <option name="closed" value="true" />
+      <created>1765831810214</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765831810214</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +198,7 @@
     <MESSAGE value="first final" />
     <MESSAGE value="last" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="navbar and hero" />
+    <option name="LAST_COMMIT_MESSAGE" value="navbar and hero" />
   </component>
 </project>
