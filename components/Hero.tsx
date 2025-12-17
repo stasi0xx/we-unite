@@ -68,14 +68,14 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.8 }}
                     // Usunąłem ujemny margines (-mt-2), żeby tekst nie wchodził na logo
-                    className="text-3xl md:text-5xl font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 uppercase mt-4 mb-2 drop-shadow-sm"
+                    className="text-4xl md:text-6xl font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 uppercase mt-4 mb-2 drop-shadow-sm"
                 >
                     Twój Spotlight
                 </motion.h2>
 
                 {/* OPIS */}
                 <p className="text-sm md:text-lg text-zinc-400 font-sans max-w-xl leading-relaxed">
-                    Budujemy systemy, które pracują, gdy Ty śpisz. Oszczędzaj czas i skaluj biznes dzięki dedykowanym rozwiązaniom AI.
+                    Dbamy o TWOJĄ widoczność. Budujemy systemy, które pracują, gdy Ty śpisz. Oszczędzaj czas i skaluj biznes.
                 </p>
 
                 {/* PRZYCISKI - LIQUID METAL STYLE */}
