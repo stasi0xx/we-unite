@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import {CookieConsent} from "@/components/CookieConsent";
-
+import { SmoothScroll } from "@/components/ui/smooth-scroll";
 // Definicja fontów
 const fontHeading = Plus_Jakarta_Sans({
     subsets: ["latin"],
@@ -24,8 +24,8 @@ const fontMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "WeUnite",
-    description: "Automatyzacja procesów biznesowych",
+    title: "WeUnite | Automatyzacja Jutra",
+    description: "Dedykowane rozwiązania AI i automatyzacja biznesu.",
 };
 
 export default function RootLayout({
@@ -37,10 +37,12 @@ export default function RootLayout({
         // W Tailwind 4 dark mode działa często automatycznie, ale wymuśmy klasę 'dark' dla pewności i stylu
         <html lang="pl" className="dark">
         <body
-            className={`${fontHeading.variable} ${fontBody.variable} ${fontMono.variable} antialiased bg-background text-foreground`}
+            className={`${fontHeading.variable} ${fontBody.variable} ${fontMono.variable} antialiased bg-background text-foreground smooth-scroll`}
         >
         <Navbar />
-        {children}
+        <SmoothScroll>
+            {children}
+        </SmoothScroll>
         <CookieConsent />
         </body>
         </html>

@@ -216,4 +216,12 @@ h1, h2, h3, h4, h5, h6 {
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    /* TO JEST KLUCZOWE DLA PŁYNNEGO PRZEWIJANIA KOTWIC */
+    scroll-behavior: smooth;
+
+    /* TO ZAPOBIEGA ZASŁANIANIU NAGŁÓWKÓW PRZEZ PASEK NAWIGACJI */
+    /* Ustaw tyle, ile wysokości ma Twój Navbar (ok. 80px) + mały odstęp */
+    scroll-padding-top: 100px;
+  }
 }

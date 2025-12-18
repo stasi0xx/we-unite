@@ -36,7 +36,6 @@ export function Navbar() {
     });
 
     const navLinks = [
-        { name: "Start", href: "/" },
         { name: "Oferta", href: "/#features" },
         { name: "Realizacje", href: "/#portfolio" }, // Jeśli masz sekcję portfolio
         { name: "O nas", href: "/#about" },

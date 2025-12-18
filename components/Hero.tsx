@@ -22,7 +22,8 @@ const techStack = [
 
 const Hero = () => {
     return (
-        <main className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background pt-32 md:pt-0">
+        // ZMIANA: Usunięto justify-center, zmieniono pt-32 na pt-24 (mobile) i md:pt-20 (desktop - miejsce na navbar)
+        <main className="relative min-h-screen w-full flex flex-col items-center overflow-hidden bg-background pt-24 md:pt-20">
 
             {/* TŁO: GRID I SPOTLIGHT */}
             <InteractiveGridPattern
@@ -41,19 +42,21 @@ const Hero = () => {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[400px] bg-primary/20 blur-[80px] md:blur-[120px] rounded-full pointer-events-none z-0" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,var(--color-background)_100%)] pointer-events-none" />
 
-            {/* GŁÓWNA TREŚĆ */}
-            <div className="relative z-10 flex flex-col items-center gap-6 max-w-5xl mx-auto text-center px-4 mb-20 w-full">
+            {/* GŁÓWNA TREŚĆ - CENTROWANIE */}
+            {/* ZMIANA: Dodano 'flex-1 flex flex-col justify-center' - to centruje treść w wolnej przestrzeni */}
+            {/* Usunięto 'mb-20', który przesuwał treść do góry */}
+            <div className="relative z-10 flex-1 flex flex-col justify-center items-center gap-6 max-w-5xl mx-auto text-center px-4 w-full pb-8">
 
-                {/* --- LOGO (Poprawiona nazwa pliku) --- */}
+
+                {/* --- LOGO --- */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="relative w-full max-w-[300px] md:max-w-[500px] h-auto flex justify-center mt-5 md:mt-20"
+                    className="relative w-full max-w-[300px] md:max-w-[500px] h-auto flex justify-center"
                 >
-                    {/* Zmieniłem /logo.png na /hero-logo.png, bo taki plik widziałem w Twoich uploadach */}
                     <Image
-                        src="/hero-logo.png"
+                        src="/hero-logo.webp"
                         alt="We Unite Logo"
                         width={600}
                         height={200}
@@ -67,18 +70,17 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.8 }}
-                    // Usunąłem ujemny margines (-mt-2), żeby tekst nie wchodził na logo
-                    className="text-4xl md:text-6xl font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 uppercase mt-4 mb-2 drop-shadow-sm"
+                    className="text-3xl md:text-6xl font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 uppercase mt-4 mb-2 drop-shadow-sm"
                 >
                     Twój Spotlight
                 </motion.h2>
 
                 {/* OPIS */}
                 <p className="text-sm md:text-lg text-zinc-400 font-sans max-w-xl leading-relaxed">
-                    Dbamy o TWOJĄ widoczność. Budujemy systemy, które pracują, gdy Ty śpisz. Oszczędzaj czas i skaluj biznes.
+                    Budujemy systemy, które pracują, gdy Ty śpisz. Oszczędzaj czas i skaluj biznes dzięki dedykowanym rozwiązaniom AI.
                 </p>
 
-                {/* PRZYCISKI - LIQUID METAL STYLE */}
+                {/* PRZYCISKI */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto justify-center">
                     <button className="
                         group relative overflow-hidden
@@ -92,15 +94,13 @@ const Hero = () => {
                         cursor-pointer z-10
                     ">
                         <span className="relative z-10 drop-shadow-sm">Rozpocznij Projekt</span>
-
-                        {/* Shine effect */}
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shine_1s_ease-in-out_infinite]" />
                     </button>
                 </div>
             </div>
 
             {/* MARQUEE */}
-            <div className="relative z-10 w-full mt-auto mb-12">
+            <div className="relative z-10 w-full mb-8 md:mb-12">
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background to-transparent z-20"></div>
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background to-transparent z-20"></div>
 
