@@ -54,7 +54,6 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
 
     return (
         <main className="min-h-screen bg-background text-foreground relative overflow-hidden font-sans">
-            <Navbar />
 
             <Spotlight />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none z-0" />
@@ -132,7 +131,7 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
                     <section className="border-t border-white/10 pt-16">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                                Nasze Realizacje
+                                Przykładowe Realizacje
                             </h2>
                             <p className="text-zinc-400 max-w-2xl mx-auto">
                                 Zobacz wybrane projekty w akcji. Najeźdź kursorem, aby zobaczyć efekt 3D.

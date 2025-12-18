@@ -85,8 +85,8 @@ export const OFFERS: Record<string, Offer> = {
                 link: "https://www.pierwszetrzezwepokolenie.pl/"
             },
             {
-                title: "E-commerce Beauty",
-                description: "Sklep internetowy oparty o Shopify Headless. Niesamowita szybkość i unikalny design marki.",
+                title: "Checz Gdynia",
+                description: "Strona sportowej prosta i skuteczna",
                 image: "/page3.webp", // ZMIEŃ NA SWÓJ PLIK
                 link: "https://www.checzgdynia.com/"
             }

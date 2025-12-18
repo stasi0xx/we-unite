@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="navbar and hero">
-      <change afterPath="$PROJECT_DIR$/components/ui/smooth-scroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero-logo.png" beforeDir="false" />
+    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="cosmetic changes">
+      <change beforePath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/offers-data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/offers-data.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +111,7 @@
       <workItem from="1765885027047" duration="855000" />
       <workItem from="1765963694302" duration="82000" />
       <workItem from="1765975327138" duration="72000" />
-      <workItem from="1766072397168" duration="1157000" />
+      <workItem from="1766072397168" duration="1458000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -208,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765963770230</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="cosmetic changes">
+      <option name="closed" value="true" />
+      <created>1766073635684</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1766073635684</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +224,7 @@
     <MESSAGE value="last" />
     <MESSAGE value="updates" />
     <MESSAGE value="navbar and hero" />
-    <option name="LAST_COMMIT_MESSAGE" value="navbar and hero" />
+    <MESSAGE value="cosmetic changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="cosmetic changes" />
   </component>
 </project>

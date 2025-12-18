@@ -31,7 +31,6 @@ export const Footer = () => {
                     <div className="flex items-center gap-4 mt-4">
                         <SocialLink href="#" icon={<Twitter size={18} />} />
                         <SocialLink href="#" icon={<Linkedin size={18} />} />
-                        <SocialLink href="#" icon={<Github size={18} />} />
                         <SocialLink href="#" icon={<Facebook size={18} />} />
                         <SocialLink href="https://www.instagram.com/muwe?igsh=eDF5NHIzZGt3Nnd6" icon={<Instagram size={18} />} />
                     </div>
@@ -41,10 +40,10 @@ export const Footer = () => {
                 <div>
                     <h4 className="font-bold text-white mb-6">Oferta</h4>
                     <ul className="space-y-3 text-sm text-zinc-400">
-                        <li><FooterLink href="#">AI Social Responder</FooterLink></li>
-                        <li><FooterLink href="#">Automatyzacja Biznesu</FooterLink></li>
-                        <li><FooterLink href="#">Inteligentne Strony</FooterLink></li>
-                        <li><FooterLink href="#">Konsultacje AI</FooterLink></li>
+                        <li><FooterLink href="/oferta/ai-social-responder">AI Social Responder</FooterLink></li>
+                        <li><FooterLink href="/oferta/automatyzacja-biznesu">Automatyzacja Biznesu</FooterLink></li>
+                        <li><FooterLink href="/oferta/inteligentne-strony">Inteligentne Strony</FooterLink></li>
+                        <li><FooterLink href="/oferta/social-media-marketing">Social Media Marketing</FooterLink></li>
                     </ul>
                 </div>
 
