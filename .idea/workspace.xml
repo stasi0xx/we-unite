@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="cosmetic changes">
-      <change beforePath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/offers-data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/offers-data.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/chat/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/visualizers/ai-chat.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/visualizers/automation-beam.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/visualizers/social-distributor.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/visualizers/web-performance.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/db-mock.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/hero-visualizer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero-visualizer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -111,7 +119,12 @@
       <workItem from="1765885027047" duration="855000" />
       <workItem from="1765963694302" duration="82000" />
       <workItem from="1765975327138" duration="72000" />
-      <workItem from="1766072397168" duration="1458000" />
+      <workItem from="1766072397168" duration="3635000" />
+      <workItem from="1766149823496" duration="5000" />
+      <workItem from="1766235798929" duration="508000" />
+      <workItem from="1766237634191" duration="2291000" />
+      <workItem from="1766239972169" duration="565000" />
+      <workItem from="1766250813465" duration="4392000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -209,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766073635684</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="cosmetic changes">
+      <option name="closed" value="true" />
+      <created>1766074166486</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1766074166486</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
