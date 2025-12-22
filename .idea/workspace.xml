@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="cosmetic changes">
-      <change afterPath="$PROJECT_DIR$/app/api/chat/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/visualizers/ai-chat.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/visualizers/automation-beam.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/visualizers/social-distributor.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/visualizers/web-performance.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/db-mock.ts" afterDir="false" />
+    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="ai test implementation">
+      <change afterPath="$PROJECT_DIR$/components/TrustedBy.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ai-tools.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/hero-visualizer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero-visualizer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/chat/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/chat/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/visualizers/ai-chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/visualizers/ai-chat.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -24,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -124,7 +123,9 @@
       <workItem from="1766235798929" duration="508000" />
       <workItem from="1766237634191" duration="2291000" />
       <workItem from="1766239972169" duration="565000" />
-      <workItem from="1766250813465" duration="4392000" />
+      <workItem from="1766250813465" duration="7818000" />
+      <workItem from="1766391381508" duration="1977000" />
+      <workItem from="1766394757832" duration="631000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -230,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766074166486</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ai test implementation">
+      <option name="closed" value="true" />
+      <created>1766255337796</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1766255337796</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +255,7 @@
     <MESSAGE value="updates" />
     <MESSAGE value="navbar and hero" />
     <MESSAGE value="cosmetic changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="cosmetic changes" />
+    <MESSAGE value="ai test implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="ai test implementation" />
   </component>
 </project>

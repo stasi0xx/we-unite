@@ -38,7 +38,7 @@ export function Navbar() {
     const navLinks = [
         { name: "Oferta", href: "/#features" },
         { name: "Realizacje", href: "/#portfolio" }, // Jeśli masz sekcję portfolio
-        { name: "O nas", href: "/#about" },
+        { name: "Zaufali nam", href: "/#TrustedBy" },
     ];
 
     return (

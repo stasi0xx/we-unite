@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { FeaturesBento } from "@/components/Features";
 import {Contact} from "@/components/Contact";
 import {Footer} from "@/components/Footer";
+import {TrustedBy} from "@/components/TrustedBy";
 
 export default function Home() {
     return (
@@ -25,6 +26,7 @@ export default function Home() {
             <div className="relative z-10 bg-background w-full shadow-[0_-20px_80px_-20px_rgba(0,0,0,0.8)]">
                 {/* Tutaj wrzucasz wszystkie kolejne sekcje */}
                 <FeaturesBento />
+                <TrustedBy />
                 <Contact />
                 {/* Przykładowy footer/odstęp, żebyś widział efekt do końca */}
                 <Footer />
