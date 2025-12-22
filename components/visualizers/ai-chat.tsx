@@ -11,8 +11,6 @@ type ChatMessage = UIMessage<never, never, any>;
 
 export default function AiChatInteractive() {
     const [inputValue, setInputValue] = useState("");
-
-    // ZMIANA 1: Ref teraz wskazuje na kontener scrollowany, a nie na element końcowy
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     const { messages, sendMessage, status, setMessages } = useChat({
@@ -48,8 +46,7 @@ export default function AiChatInteractive() {
 
     const isLoading = status === 'submitted' || status === 'streaming';
 
-    // ZMIANA 2: Nowa logika scrollowania
-    // Używamy scrollTop = scrollHeight, co dotyczy TYLKO tego diva, a nie całego window.
+    // Logika scrollowania
     useEffect(() => {
         if (scrollContainerRef.current) {
             const { scrollHeight, clientHeight } = scrollContainerRef.current;
@@ -76,7 +73,6 @@ export default function AiChatInteractive() {
             </div>
 
             {/* Messages Area */}
-            {/* ZMIANA 3: Przypisujemy ref do tego kontenera */}
             <div
                 ref={scrollContainerRef}
                 className="flex-1 overflow-y-auto p-4 space-y-5 scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-track-transparent"
@@ -90,28 +86,45 @@ export default function AiChatInteractive() {
                         )}
                     >
                         <div className={cn(
-                            "flex gap-3 max-w-[85%]",
+                            "flex gap-3 max-w-[85%]", // Ogranicza max szerokość dymka względem kontenera
                             m.role === "user" ? "flex-row-reverse" : "flex-row"
                         )}>
+                            {/* Avatar */}
                             <div className={cn(
                                 "h-8 w-8 rounded-full flex items-center justify-center shrink-0 border shadow-sm",
                                 m.role === "user"
                                     ? "bg-blue-600 border-blue-500 text-white"
                                     : "bg-zinc-800 border-zinc-700 text-zinc-400"
                             )}>
+                                {m.role === "user" ? <User size={14} /> : <Bot size={14} />}
+                            </div>
+
+                            {/* Dymek czatu */}
+                            <div className={cn(
+                                "px-4 py-2.5 text-sm shadow-md break-words", // break-words zapobiega wylewaniu tekstu
+                                "w-fit", // KLUCZOWE: Dopasowuje szerokość dymka do zawartości
+                                m.role === "user"
+                                    ? "bg-blue-600 text-white rounded-2xl rounded-tr-sm"
+                                    : "bg-zinc-800 text-zinc-200 border border-zinc-700 rounded-2xl rounded-tl-sm"
+                            )}>
                                 {m.parts ? m.parts.map((part, i) => {
+                                    // Renderowanie tekstu
                                     if (part.type === 'text') {
-                                        return <span key={i} className="whitespace-pre-wrap leading-relaxed block">{part.text}</span>;
+                                        // Usunięto 'block', dodano 'break-words' dla pewności
+                                        return (
+                                            <span key={i} className="whitespace-pre-wrap leading-relaxed">
+                                                {part.text}
+                                            </span>
+                                        );
                                     }
 
-                                    // FIX AI SDK v5: Sprawdzamy czy typ zaczyna się od 'tool-'
-                                    // Zamiast starego sprawdzenia: part.type === 'tool-invocation'
+                                    // Renderowanie narzędzia (Fix dla SDK v5)
+                                    // Sprawdzamy czy typ zaczyna się od 'tool-'
                                     if (part.type.startsWith('tool-')) {
-                                        // W v5 nazwa narzędzia jest częścią typu, np. 'tool-saveLead'
                                         const toolName = part.type.replace('tool-', '');
 
                                         return (
-                                            <div key={i} className="my-2 p-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-center gap-2 text-xs text-emerald-500 font-mono">
+                                            <div key={i} className="my-2 p-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-center gap-2 text-xs text-emerald-500 font-mono w-full">
                                                 <Loader2 size={12} className="animate-spin" />
                                                 <span className="uppercase tracking-wider">
                                                     {toolName === 'saveLead' ? 'Zapisywanie...' : 'Przetwarzanie...'}
