@@ -22,19 +22,19 @@ export const OFFERS: Record<string, Offer> = {
     "ai-social-responder": {
         id: "ai-social-responder",
         title: "AI Social Responder",
-        subtitle: "Twój wirtualny handlowiec 24/7",
+        subtitle: "Twój wirtualny handlowiec dostępny 24/7",
+        // ZMIANA TREŚCI SPRZEDAŻOWEJ
         description: `
-            W świecie social media czas reakcji to pieniądz. Jeśli klient pisze o 2:00 w nocy, a Ty odpisujesz o 9:00 rano – już go straciłeś.
-            
-            Nasz AI Social Responder to nie jest zwykły chatbot. To zaawansowany model językowy, który rozumie kontekst, intencje i potrafi prowadzić naturalną rozmowę.
-            Nie tylko odpowiada na pytania, ale aktywnie sprzedaje, umawia spotkania w Twoim kalendarzu i zbiera dane kontaktowe.
+            Tracisz klientów, bo nie odpisujesz natychmiast? W erze TikToka i Instagrama czas reakcji to pieniądz. Jeśli klient pisze o 2:00 w nocy, a Ty odpisujesz o 9:00 rano – konkurencja już go przejęła.
+            Nasz model językowy rozumie kontekst, slang i intencje. To nie jest zwykły chatbot "wciśnij 1", to Twój najlepszy pracownik.
         `,
         icon: BellIcon,
         benefits: [
-            "Natychmiastowa reakcja na wiadomości (Instagram, FB, WhatsApp)",
-            "Automatyczna kwalifikacja leadów",
-            "Zapisywanie spotkań bezpośrednio w Google Calendar",
-            "Naturalny język, nie do odróżnienia od człowieka"
+            "Wdrożenie systemu już za symboliczne 1 PLN",
+            "Obsługa do 1000 wiadomości w pakiecie za 99 PLN/mc",
+            "Natychmiastowa reakcja (poniżej 3 sekund)",
+            "Zapisywanie spotkań bezpośrednio w Twoim kalendarzu Google",
+            "Działa na Instagramie, Messengerze i WhatsAppie"
         ]
     },
     "automatyzacja-biznesu": {
@@ -57,37 +57,40 @@ export const OFFERS: Record<string, Offer> = {
     "inteligentne-strony": {
         id: "inteligentne-strony",
         title: "Inteligentne Strony WWW",
-        subtitle: "Szybkość, która daje przewagę w Google",
+        subtitle: "Szybkość Next.js + Skuteczność Handlowca",
         description: `
-            Większość stron to "wizytówki", które nie sprzedają. My tworzymy platformy oparte o Next.js 16 i React Server Components.
+            Większość stron to martwe wizytówki, które tylko generują koszty. My tworzymy platformy, które aktywnie wspierają Twój biznes.
             
-            Co to oznacza? Twoja strona ładuje się w ułamku sekundy. Jest bezpieczna, skalowalna i kocha ją Google. To nie jest kolejny szablon na WordPressie, który "zamula" po zainstalowaniu trzech wtyczek.
+            Nie używamy gotowców z WordPressa, które "zamulają" po miesiącu. Budujemy w technologii Next.js 16+ (tej samej, z której korzysta Netflix czy HBO).
+            
+            **Nasze pakiety:**
+            🟢 **Start (1500 PLN):** Ultraszybka strona wizytówka. Idealna dla usług lokalnych. Nowoczesny design, RWD, optymalizacja pod Google.
+            🟣 **Pro (3500 PLN):** "Inteligentna Strona". Zintegrowana z CRM, z wbudowanym systemem rezerwacji, blogiem i pełną analityką zachowań użytkownika.
         `,
         icon: Globe,
         benefits: [
-            "Wynik 95-100/100 w Google PageSpeed Insights",
-            "Pełna optymalizacja SEO technicznego",
-            "Nowoczesny design (Tailwind CSS 4 + Framer Motion)",
-            "CMS dostosowany do Twoich potrzeb (Sanity/Strapi)"
+            "Wersja Start (1500 zł) lub Pro z automatyzacją (3500 zł)",
+            "Pełna optymalizacja SEO technicznego na start",
+            "CMS (Panel zarządzania), który jest prostszy niż Word"
         ],
-        // --- TUTAJ DODAJESZ SWOJE PROJEKTY ---
         showcase: [
+            // ... (Twoje projekty: Esencja, Fundacja, Checz - zostają bez zmian)
             {
                 title: "Esencja - Kreatorzy Reklamy",
                 description: "Nowoczesna strona agencji reklamowej. Minimalizm, animacje scrollowania i pełna optymalizacja pod konwersję.",
-                image: "/case1.webp", // Używam pliku, który już masz
+                image: "/case1.webp",
                 link: "https://esencja.net"
             },
             {
                 title: "Pierwsze Trzeźwe Pokolenie",
                 description: "Strona fundacji Bartłomeja Glinki, która walczy z uzanleżnieniami wśród młodzieży",
-                image: "/page2.webp", // ZMIEŃ NA SWÓJ PLIK (np. /projekty/projekt2.png)
+                image: "/page2.webp",
                 link: "https://www.pierwszetrzezwepokolenie.pl/"
             },
             {
                 title: "Checz Gdynia",
                 description: "Strona sportowej prosta i skuteczna",
-                image: "/page3.webp", // ZMIEŃ NA SWÓJ PLIK
+                image: "/page3.webp",
                 link: "https://www.checzgdynia.com/"
             }
         ]

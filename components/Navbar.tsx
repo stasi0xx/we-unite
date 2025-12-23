@@ -37,8 +37,9 @@ export function Navbar() {
 
     const navLinks = [
         { name: "Oferta", href: "/#features" },
-        { name: "Realizacje", href: "/#portfolio" }, // Jeśli masz sekcję portfolio
+         // Jeśli masz sekcję portfolio
         { name: "Zaufali nam", href: "/#TrustedBy" },
+        { name: "FAQ", href: "/#faq" },
     ];
 
     return (
@@ -61,8 +62,8 @@ export function Navbar() {
                     {/* LOGO */}
                     <Link href="/" className="relative z-50">
                         <Image
-                            src="/logo.png"
-                            alt="We Unite"
+                            src="/weunite-logo-strony-www.png"
+                            alt="WeUnite - Logo Agencji Automatyzacji Biznesu"
                             width={120}
                             height={60}
                             className="h-8 w-auto object-contain"

@@ -16,8 +16,8 @@ export const Footer = () => {
                 <div className="space-y-4">
                     <Link href="/" className="flex items-center gap-2 group">
                         <Image
-                            src="/logo.png" // <-- Ścieżka do Twojego pliku w folderze public
-                            alt="WeUnite AI Logo"
+                            src="/weunite-logo-strony-www.png" // <-- Ścieżka do Twojego pliku w folderze public
+                            alt="WeUnite - Inteligentne Strony WWW i Boty Sprzedażowe AI"
                             width={100}
                             height={50}
                             className="object-contain p-0.5" // p-0.5 dodaje mini margines, żeby nie dotykało krawędzi
@@ -32,7 +32,7 @@ export const Footer = () => {
                         <SocialLink href="#" icon={<Twitter size={18} />} />
                         <SocialLink href="#" icon={<Linkedin size={18} />} />
                         <SocialLink href="#" icon={<Facebook size={18} />} />
-                        <SocialLink href="https://www.instagram.com/muwe?igsh=eDF5NHIzZGt3Nnd6" icon={<Instagram size={18} />} />
+                        <SocialLink href="https://www.instagram.com/weunite.pl/" icon={<Instagram size={18} />} />
                     </div>
                 </div>
 
@@ -51,8 +51,8 @@ export const Footer = () => {
                 <div>
                     <h4 className="font-bold text-white mb-6">Firma</h4>
                     <ul className="space-y-3 text-sm text-zinc-400">
-                        <li><FooterLink href="#">O nas</FooterLink></li>
-                        <li><FooterLink href="#">Case Studies</FooterLink></li>
+                        <li><FooterLink href="#TrustedBy">Zaufali Nam</FooterLink></li>
+                        <li><FooterLink href="#faq">FAQ</FooterLink></li>
                         <li><FooterLink href="/regulamin">Regulamin</FooterLink></li>
                         <li><FooterLink href="/polityka-prywatnosci">Polityka Prywatności</FooterLink></li>
                     </ul>

@@ -2,13 +2,15 @@ import { notFound } from "next/navigation";
 import { OFFERS } from "@/lib/offers-data";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { CheckCircle2, ArrowRight, ArrowLeft } from "lucide-react";
+import { CheckCircle2, ArrowRight, ArrowLeft, Zap, Rocket, Settings } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { PinContainer } from "@/components/ui/3d-pin";
 import type { Metadata } from "next";
 import {HeroVisualizer} from "@/components/hero-visualizer";
+import {LeadForm} from "@/components/LeadForm";
+import {FAQ} from "@/components/FAQ";
 
 // --- 1. FUNKCJA POMOCNICZA (Dodaj ją tutaj, przed generateStaticParams) ---
 // Ta funkcja zabezpiecza przed błędem "Invalid URL", gdy link jest np. "#"
@@ -33,11 +35,46 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const offer = OFFERS[slug];
 
-    if (!offer) return { title: "Oferta nie znaleziona" };
+    // Zabezpieczenie na wypadek błędnego linku
+    if (!offer) {
+        return {
+            title: "Oferta nie znaleziona | WeUnite",
+            robots: { index: false } // Nie indeksuj stron 404
+        };
+    }
+
+    // Tworzenie chwytliwego tytułu pod SEO
+    // Np.: "AI Social Responder - Cennik i Wdrożenie | WeUnite"
+    const seoTitle = `${offer.title} - Automatyzacja i Cennik`;
+
+    // Skracanie opisu do ~160 znaków dla Google (meta description)
+    const seoDescription = offer.subtitle.length > 150
+        ? offer.subtitle
+        : `${offer.subtitle}. Sprawdź jak ${offer.title} może zaoszczędzić Twój czas. Wdrożenie automatyzacji w Twojej firmie.`;
+
+    // Pobranie obrazka z showcase (jeśli istnieje) do podglądu na Facebooku
+    const ogImage = offer.showcase && offer.showcase.length > 0
+        ? offer.showcase[0].image
+        : "/og-default.jpg"; // Domyślny obrazek
 
     return {
-        title: `${offer.title} | WeUnite`,
-        description: offer.subtitle,
+        title: seoTitle,
+        description: seoDescription,
+        openGraph: {
+            title: seoTitle,
+            description: seoDescription,
+            images: [
+                {
+                    url: ogImage,
+                    width: 1200,
+                    height: 630,
+                    alt: offer.title,
+                },
+            ],
+        },
+        alternates: {
+            canonical: `/oferta/${slug}`,
+        }
     };
 }
 
@@ -92,6 +129,95 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
                 {/* GŁÓWNA TREŚĆ */}
                 <div className="grid md:grid-cols-3 gap-12 mb-24">
                     <div className="md:col-span-2 space-y-8 text-lg text-zinc-300 leading-relaxed whitespace-pre-line">
+                        {slug === 'ai-social-responder' && (
+                            <div className="my-12 space-y-12">
+
+                                {/* A. TRANSPARENTNY CENNIK (Dwie karty) */}
+                                <div>
+                                    <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                                        <Zap className="text-yellow-400" />
+                                        Jasne zasady rozliczeń
+                                    </h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {/* KARTA 1: WDROŻENIE */}
+                                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-green-500/50 transition-colors relative overflow-hidden group">
+                                            <div className="absolute top-0 right-0 bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">
+                                                OFERTA START
+                                            </div>
+                                            <div className="mb-4">
+                                                <p className="text-zinc-400 text-sm font-medium uppercase tracking-wider">Krok 1: Wdrożenie</p>
+                                                <div className="flex items-baseline gap-1 mt-2">
+                                                    <span className="text-4xl font-bold text-white">1 PLN</span>
+                                                    <span className="text-sm text-zinc-500">jednorazowo</span>
+                                                </div>
+                                            </div>
+                                            <ul className="space-y-2 text-sm text-zinc-300">
+                                                <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Pełna konfiguracja konta</li>
+                                                <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Podpięcie pod fanpage/IG</li>
+                                                <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500"/> Testy działania</li>
+                                            </ul>
+                                        </div>
+
+                                        {/* KARTA 2: UTRZYMANIE */}
+                                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-colors">
+                                            <div className="mb-4">
+                                                <p className="text-zinc-400 text-sm font-medium uppercase tracking-wider">Krok 2: Utrzymanie</p>
+                                                <div className="flex items-baseline gap-1 mt-2">
+                                                    <span className="text-4xl font-bold text-white">99 PLN</span>
+                                                    <span className="text-sm text-zinc-500">/ miesięcznie</span>
+                                                </div>
+                                            </div>
+                                            <ul className="space-y-2 text-sm text-zinc-300">
+                                                <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500"/> Do 1000 wiadomości / mc</li>
+                                                <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500"/> Raporty skuteczności</li>
+                                                <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500"/> Wsparcie techniczne 24/7</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p className="text-xs text-zinc-500 mt-3 text-center md:text-left">
+                                        * Brak ukrytych kosztów. Możesz zrezygnować w dowolnym momencie z 30-dniowym wypowiedzeniem.
+                                    </p>
+                                </div>
+
+                                {/* B. PROCES WDROŻENIA (3 KROKI) */}
+                                <div>
+                                    <h3 className="text-2xl font-bold text-white mb-6">Jak zaczynamy?</h3>
+                                    <div className="relative border-l border-white/10 ml-3 space-y-8 pl-8 py-2">
+                                        {/* KROK 1 */}
+                                        <div className="relative">
+                                            <span className="absolute -left-[41px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-black ring-4 ring-background">1</span>
+                                            <h4 className="text-lg font-bold text-white">Zamawiasz wdrożenie za 1 zł</h4>
+                                            <p className="text-zinc-400 text-sm mt-1">
+                                                Klikasz "Skontaktuj się", a my wysyłamy Ci krótką ankietę, żeby AI wiedziało, jak sprzedawać Twoje produkty.
+                                            </p>
+                                        </div>
+                                        {/* KROK 2 */}
+                                        <div className="relative">
+                                            <span className="absolute -left-[41px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-xs font-bold text-white ring-4 ring-background border border-white/20">2</span>
+                                            <h4 className="text-lg font-bold text-white">My konfigurujemy magię</h4>
+                                            <p className="text-zinc-400 text-sm mt-1">
+                                                W ciągu 48h podpinamy system pod Twoje social media i testujemy scenariusze rozmów.
+                                            </p>
+                                        </div>
+                                        {/* KROK 3 */}
+                                        <div className="relative">
+                                            <span className="absolute -left-[41px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-xs font-bold text-white ring-4 ring-background border border-white/20">3</span>
+                                            <h4 className="text-lg font-bold text-white">Startujesz!</h4>
+                                            <p className="text-zinc-400 text-sm mt-1">
+                                                Od teraz każdy komentarz i wiadomość prywatna są obsługiwane natychmiastowo. Ty tylko sprawdzasz powiadomienia o nowych leadach.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="mb-16">
+                                    <LeadForm />
+                                    <FAQ />
+                                </div>
+
+                            </div>
+                        )}
+
                         {offer.description}
 
                         <div className="pt-8">
@@ -125,6 +251,8 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
                         </div>
                     </div>
                 </div>
+
+
 
                 {/* --- SEKCJA REALIZACJE (3D PIN) --- */}
                 {offer.showcase && offer.showcase.length > 0 && (
@@ -161,9 +289,10 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
                                             <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 overflow-hidden relative">
                                                 <Image
                                                     src={project.image}
-                                                    alt={project.title}
+                                                    alt={`Realizacja strony WWW: ${project.title} - Wykonanie WeUnite`}
                                                     fill
                                                     className="object-cover object-top"
+
                                                 />
                                             </div>
                                         </div>

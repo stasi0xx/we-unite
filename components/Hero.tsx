@@ -8,6 +8,7 @@ import { Marquee } from "@/components/ui/marquee";
 import { Database, Zap, Bot, Layers, Server, Code2, Globe, Cpu } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const techStack = [
     { icon: Database, label: "Supabase" },
@@ -56,8 +57,8 @@ const Hero = () => {
                     className="relative w-full max-w-[300px] md:max-w-[500px] h-auto flex justify-center"
                 >
                     <Image
-                        src="/hero-logo.webp"
-                        alt="We Unite Logo"
+                        src="/agencja-automatyzacji-ai-hero.webp"
+                        alt="WeUnite - Agencja Automatyzacji AI i Tworzenia Stron WWW"
                         width={600}
                         height={200}
                         priority
@@ -66,36 +67,53 @@ const Hero = () => {
                 </motion.div>
 
                 {/* --- NAPIS: TWÓJ SPOTLIGHT --- */}
-                <motion.h2
+                <motion.h1
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.8 }}
-                    className="text-3xl md:text-6xl font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 uppercase mt-4 mb-2 drop-shadow-sm"
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                    className="text-3xl md:text-7xl font-bold tracking-tight text-white mt-2 mb-4 drop-shadow-2xl max-w-4xl leading-[1.1]"
                 >
-                    Twój Spotlight
-                </motion.h2>
-
+                    Twoja Sprzedaż <br />
+                    <span className="
+        relative
+        text-transparent bg-clip-text
+        bg-gradient-to-b from-zinc-300 via-white to-zinc-500
+        drop-shadow-[0_0_2px_rgba(255,255,255,0.3)]
+    ">
+        na Autopilocie
+    </span>
+                </motion.h1>
                 {/* OPIS */}
-                <p className="text-sm md:text-lg text-zinc-400 font-sans max-w-xl leading-relaxed">
-                    Budujemy systemy, które pracują, gdy Ty śpisz. Oszczędzaj czas i skaluj biznes dzięki dedykowanym rozwiązaniom AI.
+                <p className="text-base md:text-xl text-zinc-300 font-sans max-w-2xl leading-relaxed text-center md:mb-8 mb-3">
+                    Wdróż <strong className="text-white">AI Social Respondera już od 1 PLN</strong>.
+                    Odpisuj klientom w 3 sekundy, 24/7 na Instagramie i FB.
+                    Tworzymy inteligentne strony WWW i systemy, które zarabiają, gdy Ty śpisz.
                 </p>
 
                 {/* PRZYCISKI */}
-                <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto justify-center">
-                    <button className="
-                        group relative overflow-hidden
-                        px-8 py-3 md:px-10 md:py-4 rounded-full font-bold text-base md:text-lg text-zinc-900
-                        bg-gradient-to-b from-white via-zinc-200 to-zinc-400
-                        border-t border-white/80 border-b border-zinc-500
-                        shadow-[0_0_20px_-5px_rgba(255,255,255,0.4),inset_0_1px_0_rgba(255,255,255,0.8),inset_0_-2px_5px_rgba(0,0,0,0.1)]
-                        hover:shadow-[0_0_40px_-5px_rgba(255,255,255,0.6),inset_0_1px_0_rgba(255,255,255,1)]
-                        active:scale-95 active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.2)]
-                        transition-all duration-300 ease-out
-                        cursor-pointer z-10
-                    ">
-                        <span className="relative z-10 drop-shadow-sm">Rozpocznij Projekt</span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shine_1s_ease-in-out_infinite]" />
-                    </button>
+                <div className="flex flex-col sm:flex-row md:gap-4 gap-2 w-full sm:w-auto justify-center">
+                    <Link href="/oferta/ai-social-responder"> {/* Pamiętaj o imporcie Link z next/link! */}
+                        <button className="
+            group relative overflow-hidden
+            px-8 py-3 md:px-10 md:py-4 rounded-full font-bold text-base md:text-lg text-zinc-900
+            bg-gradient-to-b from-white via-zinc-200 to-zinc-400
+            border-t border-white/80 border-b border-zinc-500
+            shadow-[0_0_20px_-5px_rgba(255,255,255,0.4)]
+            hover:shadow-[0_0_40px_-5px_rgba(255,255,255,0.6)]
+            active:scale-95 transition-all duration-300 ease-out
+            cursor-pointer z-10
+        ">
+                            <span className="relative z-10 drop-shadow-sm">Wdróż bota za 1 PLN</span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shine_1s_ease-in-out_infinite]" />
+                        </button>
+                    </Link>
+
+                    {/* Drugi przycisk (opcjonalny, np. do cennika stron) */}
+                    <Link href="/oferta/inteligentne-strony">
+                        <button className="px-8 py-3 md:px-10 md:py-4 rounded-full font-semibold text-zinc-300 hover:text-white transition-colors border border-white/10 hover:bg-white/5">
+                            Szukam strony WWW
+                        </button>
+                    </Link>
                 </div>
             </div>
 
