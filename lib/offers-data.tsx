@@ -12,6 +12,8 @@ export type Offer = {
     id: string;
     title: string;
     subtitle: string;
+    price: string;
+    priceId: string;
     description: string;
     icon: LucideIcon;
     benefits: string[];
@@ -23,6 +25,8 @@ export const OFFERS: Record<string, Offer> = {
         id: "ai-social-responder",
         title: "AI Social Responder",
         subtitle: "Twój wirtualny handlowiec dostępny 24/7",
+        price: "99zł",
+        priceId:"price_1ShXjx469LQK5IDgj790o5ZM",
         // ZMIANA TREŚCI SPRZEDAŻOWEJ
         description: `
             Tracisz klientów, bo nie odpisujesz natychmiast? W erze TikToka i Instagrama czas reakcji to pieniądz. Jeśli klient pisze o 2:00 w nocy, a Ty odpisujesz o 9:00 rano – konkurencja już go przejęła.
@@ -41,6 +45,8 @@ export const OFFERS: Record<string, Offer> = {
         id: "automatyzacja-biznesu",
         title: "Automatyzacja Biznesu",
         subtitle: "Odzyskaj 20h tygodniowo, eliminując nudne zadania",
+        price: "99zł",
+        priceId:"price_1ShXjx469LQK5IDgj790o5ZM",
         description: `
             Czy wiesz, że 30% czasu pracy w biurze to "przeklejanie danych"? Łączymy systemy, których używasz na co dzień (Gmail, Slack, Trello, CRM, Excel), w jeden spójny organizm.
             
@@ -58,6 +64,8 @@ export const OFFERS: Record<string, Offer> = {
         id: "inteligentne-strony",
         title: "Inteligentne Strony WWW",
         subtitle: "Szybkość Next.js + Skuteczność Handlowca",
+        price: "99zł",
+        priceId:"price_1ShXjx469LQK5IDgj790o5ZM",
         description: `
             Większość stron to martwe wizytówki, które tylko generują koszty. My tworzymy platformy, które aktywnie wspierają Twój biznes.
             
@@ -98,6 +106,8 @@ export const OFFERS: Record<string, Offer> = {
     "social-media-marketing": {
         id: "social-media-marketing",
         title: "Social Media Marketing",
+        price: "99zł",
+        priceId:"price_1ShXjx469LQK5IDgj790o5ZM",
         subtitle: "Zasięgi budowane technologią, a nie przypadkiem",
         description: `
             Publikowanie "na czuja" to strata czasu. Wdrażamy systemy, które automatyzują dystrybucję treści.
@@ -115,6 +125,8 @@ export const OFFERS: Record<string, Offer> = {
     "dedykowane-aplikacje": {
         id: "dedykowane-aplikacje",
         title: "Dedykowane Aplikacje",
+        price: "99zł",
+        priceId:"price_1ShXjx469LQK5IDgj790o5ZM",
         subtitle: "SaaS i Panele Klienta szyte na miarę",
         description: `
             Gotowe pudełkowe rozwiązania Cię ograniczają? Budujemy dedykowane aplikacje webowe, panele klienta (B2B) i systemy SaaS.

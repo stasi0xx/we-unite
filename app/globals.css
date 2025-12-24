@@ -225,3 +225,11 @@ h1, h2, h3, h4, h5, h6 {
     scroll-padding-top: 100px;
   }
 }
+
+.StripeElement {
+  --baseSpacing: 12px;
+  --borderRadius: 0.75rem;
+  --colorBackground: color-mix(in srgb, var(--color-neutral-900), transparent 20%);
+  --colorPrimary: var(--color-blue-500);
+  --colorText: white;
+}

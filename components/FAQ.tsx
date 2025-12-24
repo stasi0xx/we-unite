@@ -7,7 +7,7 @@ import { Plus, Minus, HelpCircle } from "lucide-react";
 // LISTA PYTAŃ - Skrojona pod Twoją ofertę (Boty + Strony)
 const faqData = [
     {
-        question: "Czy oferta wdrożenia bota za 1 PLN ma jakieś ukryte koszty?",
+        question: "Czy oferta wdrożenia bota za 5 PLN ma jakieś ukryte koszty?",
         answer: "Nie. Płacisz 1 PLN netto za pełną konfigurację, podpięcie i testy. Jedynym stałym kosztem jest późniejszy abonament utrzymaniowy (99 PLN/mc), który pokrywa serwery i do 1000 wiadomości miesięcznie. Możesz zrezygnować w dowolnym momencie z zachowaniem miesięcznego okresu wypowiedzenia."
     },
     {
@@ -17,10 +17,6 @@ const faqData = [
     {
         question: "Czy bot będzie brzmiał jak robot?",
         answer: "Nie. Nasze modele są trenowane na bazie Twoich dotychczasowych rozmów i stylu komunikacji. Potrafią używać emoji, rozumieją potoczny język i slang. W 9 na 10 przypadków klient nie orientuje się, że rozmawia z AI."
-    },
-    {
-        question: "Jak długo trwa stworzenie strony WWW w pakiecie PRO?",
-        answer: "Dla stron typu 'Inteligentna Wizytówka' czas realizacji to zazwyczaj 7-10 dni roboczych. Rozbudowane systemy z panelem klienta i automatyzacją zajmują od 3 do 5 tygodni. Zawsze ustalamy harmonogram przed rozpoczęciem prac."
     },
     {
         question: "Co jeśli AI nie będzie znało odpowiedzi na pytanie klienta?",

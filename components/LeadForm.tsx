@@ -81,7 +81,7 @@ export const LeadForm = () => {
                         <Loader2 className="w-5 h-5 animate-spin" />
                     ) : (
                         <>
-                            <span>Odbieram za 1 PLN</span>
+                            <span>Odbieram za 5 PLN</span>
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </>
                     )}

@@ -18,16 +18,16 @@ const companies = [
         logo: "/clients/logo3.webp",
     },
     {
-        name: "Szkoła Językowa",
-        logo: "/clients/logo1.webp", // Ścieżka do pliku w public/clients
+        name: "Shine Hair",
+        logo: "/clients/shine-hair.jpeg", // Ścieżka do pliku w public/clients
     },
     {
-        name: "Polska Akademia Dzieci",
-        logo: "/clients/logo2.webp",
+        name: "Finanse i Księgowość",
+        logo: "/clients/finanse-i-ksiegowosc.png",
     },
     {
-        name: "Pierwsze Trzeźwe Pokolenie",
-        logo: "/clients/logo3.webp",
+        name: "Akademia rozwoju osobistego Columbus",
+        logo: "/clients/akademia-rozwoju-osobistego-columbus.jpeg",
     },
 
 ];

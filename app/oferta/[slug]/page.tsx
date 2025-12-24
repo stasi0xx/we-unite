@@ -11,6 +11,10 @@ import type { Metadata } from "next";
 import {HeroVisualizer} from "@/components/hero-visualizer";
 import {LeadForm} from "@/components/LeadForm";
 import {FAQ} from "@/components/FAQ";
+import StripeEmbeddedForm from "@/components/StripeEmbeddedForm";
+import PricingCard from "@/components/PricingCard";
+import StripePricingTable from "@/components/StripePricingTable";
+import {TrustedBy} from "@/components/TrustedBy";
 
 // --- 1. FUNKCJA POMOCNICZA (Dodaj ją tutaj, przed generateStaticParams) ---
 // Ta funkcja zabezpiecza przed błędem "Invalid URL", gdy link jest np. "#"
@@ -128,7 +132,7 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
 
                 {/* GŁÓWNA TREŚĆ */}
                 <div className="grid md:grid-cols-3 gap-12 mb-24">
-                    <div className="md:col-span-2 space-y-8 text-lg text-zinc-300 leading-relaxed whitespace-pre-line">
+                    <div className="md:col-span-3 space-y-8 text-lg text-zinc-300 leading-relaxed whitespace-pre-line">
                         {slug === 'ai-social-responder' && (
                             <div className="my-12 space-y-12">
 
@@ -147,7 +151,7 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
                                             <div className="mb-4">
                                                 <p className="text-zinc-400 text-sm font-medium uppercase tracking-wider">Krok 1: Wdrożenie</p>
                                                 <div className="flex items-baseline gap-1 mt-2">
-                                                    <span className="text-4xl font-bold text-white">1 PLN</span>
+                                                    <span className="text-4xl font-bold text-white">5 PLN</span>
                                                     <span className="text-sm text-zinc-500">jednorazowo</span>
                                                 </div>
                                             </div>
@@ -211,8 +215,11 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
                                 </div>
 
                                 <div className="mb-16">
+                                    {/*  <PricingCard price={offer.price} priceId={offer.priceId} description={offer.description} features={offer.benefits} title={offer.title} /> */}
                                     <LeadForm />
+                                    <TrustedBy />
                                     <FAQ />
+
                                 </div>
 
                             </div>
@@ -234,22 +241,7 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
                     </div>
 
                     {/* STICKY CTA */}
-                    <div className="md:col-span-1">
-                        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sticky top-32 backdrop-blur-md">
-                            <h3 className="font-bold text-white mb-2">Zainteresowany?</h3>
-                            <p className="text-sm text-zinc-400 mb-6">
-                                Umów się na darmową konsultację i sprawdź, jak możemy wdrożyć to u Ciebie.
-                            </p>
 
-                            <Link
-                                href="/#contact"
-                                className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-4 rounded-xl transition-all shadow-lg shadow-primary/20"
-                            >
-                                Skontaktuj się
-                                <ArrowRight className="w-4 h-4" />
-                            </Link>
-                        </div>
-                    </div>
                 </div>
 
 
