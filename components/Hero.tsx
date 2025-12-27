@@ -85,7 +85,7 @@ const Hero = () => {
                 </motion.h1>
                 {/* OPIS */}
                 <p className="text-base md:text-xl text-zinc-300 font-sans max-w-2xl leading-relaxed text-center md:mb-8 mb-3">
-                    Wdróż <strong className="text-white">AI Social Respondera już od 1 PLN</strong>.
+                    Wdróż <strong className="text-white">AI Social Respondera już od 5 PLN</strong>.
                     Odpisuj klientom w 3 sekundy, 24/7 na Instagramie i FB.
                     Tworzymy inteligentne strony WWW i systemy, które zarabiają, gdy Ty śpisz.
                 </p>
@@ -103,7 +103,7 @@ const Hero = () => {
             active:scale-95 transition-all duration-300 ease-out
             cursor-pointer z-10
         ">
-                            <span className="relative z-10 drop-shadow-sm">Wdróż bota za 1 PLN</span>
+                            <span className="relative z-10 drop-shadow-sm">Wdróż bota za 5 PLN</span>
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shine_1s_ease-in-out_infinite]" />
                         </button>
                     </Link>

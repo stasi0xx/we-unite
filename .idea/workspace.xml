@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="seo repairs">
-      <change afterPath="$PROJECT_DIR$/app/actions/stripe.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/checkout/[priceId]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/PricingCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/StripeEmbeddedForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/StripePricingTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/validations/stripe.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FAQ.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FAQ.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LeadForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LeadForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TrustedBy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TrustedBy.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/offers-data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/offers-data.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +123,8 @@
       <workItem from="1766414354975" duration="6384000" />
       <workItem from="1766421351372" duration="1503000" />
       <workItem from="1766504049222" duration="9026000" />
-      <workItem from="1766526967633" duration="1544000" />
+      <workItem from="1766526967633" duration="1969000" />
+      <workItem from="1766848645927" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -274,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766504069292</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="seo repairs">
+      <option name="closed" value="true" />
+      <created>1766534599438</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1766534599438</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
