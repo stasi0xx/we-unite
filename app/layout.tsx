@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
+import  {GoogleAnalytics} from "@next/third-parties/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import {CookieConsent} from "@/components/CookieConsent";
@@ -115,63 +116,31 @@ export default function RootLayout({
         },
         "sameAs": [
             "https://www.instagram.com/weunite.pl/",
-             // Dodaj jeśli masz
+            // Dodaj jeśli masz
         ]
     };
     return (
-        // W Tailwind 4 dark mode działa często automatycznie, ale wymuśmy klasę 'dark' dla pewności i stylu
         <html lang="pl" className="dark">
         <body
             className={`${fontHeading.variable} ${fontBody.variable} ${fontMono.variable} antialiased bg-background text-foreground smooth-scroll`}
         >
-
+        {/* Jedno źródło prawdy dla Schema.org */}
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
         />
 
-        <Navbar />
+        <Navbar/>
         <SmoothScroll>
             {children}
         </SmoothScroll>
-        <CookieConsent />
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "ProfessionalService", // lub LocalBusiness
-                    "name": "WeUnite",
-                    "image": "https://weunite.pl/logo.png",
-                    "url": "https://weunite.pl",
-                    "telephone": "+48537732320",
-                    "email": "info@weunite.pl",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "streetAddress": "ul. Gdyńska G/9",
-                        "addressLocality": "Gdańsk",
-                        "postalCode": "80-340",
-                        "addressCountry": "PL"
-                    },
-                    "priceRange": "1500 PLN - 3500 PLN",
-                    "openingHoursSpecification": {
-                        "@type": "OpeningHoursSpecification",
-                        "dayOfWeek": [
-                            "Monday",
-                            "Tuesday",
-                            "Wednesday",
-                            "Thursday",
-                            "Friday"
-                        ],
-                        "opens": "09:00",
-                        "closes": "17:00"
-                    },
-                    "sameAs": [
-                        "https://www.instagram.com/weunite.pl/",
-                    ]
-                })
-            }}
-        />
+
+        {/* Cookie Consent - upewnij się, że to działa z Google Consent Mode v2,
+            jeśli działasz w UE, inaczej łamiesz prawo RODO/GDPR odpalając GA4 bez zgody. */}
+        <CookieConsent/>
+
+        {/* Tutaj wchodzi GA4. Pobiera ID ze zmiennej środowiskowej */}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""}/>
         </body>
         </html>
     );
