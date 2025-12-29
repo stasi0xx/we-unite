@@ -4,29 +4,47 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { Cookie, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+
+// Helper do aktualizacji zgody w GA4
+const updateConsent = (consent: 'granted' | 'denied') => {
+    if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('consent', 'update', {
+            'analytics_storage': consent,
+            'ad_storage': consent,
+            'ad_user_data': consent,
+            'ad_personalization': consent,
+        });
+    }
+};
 
 export const CookieConsent = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Sprawdzamy, czy użytkownik już podjął decyzję
         const consent = localStorage.getItem("cookie-consent");
 
         if (!consent) {
-            // Jeśli nie, pokazujemy baner z małym opóźnieniem (dla lepszego efektu wejścia)
+            // Brak decyzji = pokazujemy baner
             const timer = setTimeout(() => setIsVisible(true), 1500);
             return () => clearTimeout(timer);
+        } else {
+            // Użytkownik już kiedyś wybrał -> przywracamy ustawienie w GA4 przy odświeżeniu
+            // (GA4 domyślnie powinno być 'denied', więc aktualizujemy tylko na 'granted')
+            if (consent === 'true') {
+                updateConsent('granted');
+            }
         }
     }, []);
 
     const handleAccept = () => {
         localStorage.setItem("cookie-consent", "true");
+        updateConsent('granted'); // <--- KLUCZOWE: Odpalamy śledzenie
         setIsVisible(false);
     };
 
     const handleDecline = () => {
         localStorage.setItem("cookie-consent", "false");
+        updateConsent('denied'); // <--- KLUCZOWE: Blokujemy śledzenie
         setIsVisible(false);
     };
 
@@ -64,23 +82,23 @@ export const CookieConsent = () => {
                                 <div className="flex gap-3 pt-1">
                                     <button
                                         onClick={handleAccept}
-                                        className="bg-primary hover:bg-primary/90 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors shadow-lg shadow-primary/20"
+                                        className="bg-primary hover:bg-primary/90 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors shadow-lg shadow-primary/20 cursor-pointer"
                                     >
                                         Akceptuję
                                     </button>
                                     <button
                                         onClick={handleDecline}
-                                        className="bg-white/5 hover:bg-white/10 text-white border border-white/10 text-xs font-medium px-4 py-2 rounded-lg transition-colors"
+                                        className="bg-white/5 hover:bg-white/10 text-white border border-white/10 text-xs font-medium px-4 py-2 rounded-lg transition-colors cursor-pointer"
                                     >
                                         Odrzuć
                                     </button>
                                 </div>
                             </div>
 
-                            {/* Przycisk zamknięcia (X) */}
                             <button
                                 onClick={handleDecline}
-                                className="absolute -top-2 -right-2 p-2 text-zinc-500 hover:text-white transition-colors"
+                                aria-label="Zamknij i odrzuć"
+                                className="absolute -top-2 -right-2 p-2 text-zinc-500 hover:text-white transition-colors cursor-pointer"
                             >
                                 <X size={16} />
                             </button>

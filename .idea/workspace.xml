@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="seo repairs">
+    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="google analytics">
+      <change afterPath="$PROJECT_DIR$/types/global.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CookieConsent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CookieConsent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -127,7 +127,7 @@
       <workItem from="1766504049222" duration="9026000" />
       <workItem from="1766526967633" duration="1969000" />
       <workItem from="1766848645927" duration="35000" />
-      <workItem from="1766994240472" duration="1145000" />
+      <workItem from="1766994240472" duration="2184000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -273,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766534599438</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="google analytics">
+      <option name="closed" value="true" />
+      <created>1766995604851</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1766995604851</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +301,7 @@
     <MESSAGE value="repairing tool invocation" />
     <MESSAGE value="visual small repairs" />
     <MESSAGE value="seo repairs" />
-    <option name="LAST_COMMIT_MESSAGE" value="seo repairs" />
+    <MESSAGE value="google analytics" />
+    <option name="LAST_COMMIT_MESSAGE" value="google analytics" />
   </component>
 </project>
