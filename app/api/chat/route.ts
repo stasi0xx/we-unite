@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     1. DIAGNOZA: Zapytaj o problemy z odpisywaniem na DM (stracony czas, klienci uciekający w weekendy).
     2. BÓL: Uświadom, że brak szybkiej odpowiedzi to strata pieniędzy.
     3. ROZWIĄZANIE: Zaproponuj system, który odpisuje w 3 sekundy.
-    4. OFERTA: "Normalnie 2000 zł, ale do końca roku robimy wdrożenie za 1 PLN".
+    4. OFERTA: "Normalnie 2000 zł, ale do końca roku robimy wdrożenie za 5 PLN".
     5. ZAMKNIĘCIE: Poproś o maila, aby wysłać proformę.
     
     Jeśli klient poda maila -> UŻYJ NARZĘDZIA 'saveLead'.
