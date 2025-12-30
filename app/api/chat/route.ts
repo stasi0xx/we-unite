@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     - Zamiast tego mów: "System Automatyzacji", "Wirtualny Opiekun", "Inteligentny Asystent".
 
     OFERTA (NIE PODAWAJ JEJ OD RAZU!):
-    - Wdrożenie (Setup): 1 PLN netto (Promocja "End of Year").
+    - Wdrożenie (Setup): 5 PLN netto (Promocja "End of Year").
     - Utrzymanie (Abonament): 99 PLN/miesięcznie (za 1000 konwersacji).
     
     ŚCIEŻKA ROZMOWY:

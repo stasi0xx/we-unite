@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="google analytics">
-      <change afterPath="$PROJECT_DIR$/types/global.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CookieConsent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CookieConsent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/chat/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/chat/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LeadForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LeadForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ai-tools.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ai-tools.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +129,8 @@
       <workItem from="1766526967633" duration="1969000" />
       <workItem from="1766848645927" duration="35000" />
       <workItem from="1766994240472" duration="2184000" />
+      <workItem from="1767035146021" duration="20000" />
+      <workItem from="1767110684068" duration="1182000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />

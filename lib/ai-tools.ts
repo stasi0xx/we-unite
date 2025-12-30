@@ -57,7 +57,7 @@ export const tools = {
                             email: email,
                             first_name: firstName,
                             last_name: lastName,
-                            source: 'ai_chat_promo_1pln',
+                            source: 'ai_chat_promo_5pln',
                             message: 'Lead z Asystenta AI (Autoresponder Promo)'
                         }
                     ])
