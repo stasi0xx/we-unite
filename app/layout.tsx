@@ -5,6 +5,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import {CookieConsent} from "@/components/CookieConsent";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
+import {FacebookPixel} from "@/components/FacebookPixel";
 // Definicja fontów
 const fontHeading = Plus_Jakarta_Sans({
     subsets: ["latin"],
@@ -125,6 +126,8 @@ export default function RootLayout({
             className={`${fontHeading.variable} ${fontBody.variable} ${fontMono.variable} antialiased bg-background text-foreground smooth-scroll`}
         >
         {/* Jedno źródło prawdy dla Schema.org */}
+
+
         <script
             id="cookie-consent-init"
             dangerouslySetInnerHTML={{
@@ -147,6 +150,8 @@ export default function RootLayout({
             type="application/ld+json"
             dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
         />
+
+        <FacebookPixel />
 
         <Navbar/>
         <SmoothScroll>

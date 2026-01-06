@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="google analytics">
+    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="production ready">
+      <change afterPath="$PROJECT_DIR$/components/FacebookPixel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/chat/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/chat/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/oferta/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LeadForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LeadForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ai-tools.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ai-tools.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/global.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -130,7 +129,9 @@
       <workItem from="1766848645927" duration="35000" />
       <workItem from="1766994240472" duration="2184000" />
       <workItem from="1767035146021" duration="20000" />
-      <workItem from="1767110684068" duration="1182000" />
+      <workItem from="1767110684068" duration="3632000" />
+      <workItem from="1767432052633" duration="10000" />
+      <workItem from="1767706597286" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -284,7 +285,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766995604851</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="production ready">
+      <option name="closed" value="true" />
+      <created>1767111893487</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1767111893487</updated>
+    </task>
+    <task id="LOCAL-00021" summary="production ready">
+      <option name="closed" value="true" />
+      <created>1767113018730</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1767113018730</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +322,7 @@
     <MESSAGE value="visual small repairs" />
     <MESSAGE value="seo repairs" />
     <MESSAGE value="google analytics" />
-    <option name="LAST_COMMIT_MESSAGE" value="google analytics" />
+    <MESSAGE value="production ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="production ready" />
   </component>
 </project>

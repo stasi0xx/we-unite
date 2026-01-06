@@ -5,4 +5,6 @@ interface Window {
         targetId: string,
         config?: Record<string, any>
     ) => void;
+    fbq: any;
+    dataLayer: any[];
 }
