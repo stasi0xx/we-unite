@@ -2,39 +2,49 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, Suspense } from 'react';
 
-// 1. Wydzielamy logikę używającą hooków do osobnego komponentu
 const PixelEvents = () => {
-    const [loaded, setLoaded] = useState(false);
     const pathname = usePathname();
-    const searchParams = useSearchParams(); // <--- To jest winowajca, który wymaga Suspense
+    const searchParams = useSearchParams();
 
     useEffect(() => {
-        if (!loaded) return;
-        // Track PageView on route change
-        window.fbq('track', 'PageView');
-    }, [pathname, searchParams, loaded]);
+        // To odpala się przy zmianie ścieżki (nawigacja wewnątrz strony)
+        // Sprawdzamy, czy fbq istnieje, żeby nie wywalić błędu przez AdBlocka
+        if (typeof window.fbq !== 'undefined') {
+            window.fbq('track', 'PageView');
+        }
+    }, [pathname, searchParams]);
 
     return (
         <Script
-            id="fb-pixel"
-            src="https://connect.facebook.net/en_US/fbevents.js"
+            id="fb-pixel-init"
             strategy="afterInteractive"
-            onLoad={() => {
-                setLoaded(true);
-                window.fbq('init', '3412865108961069');
-                window.fbq('track', 'PageView');
+            dangerouslySetInnerHTML={{
+                __html: `
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          
+          // Inicjalizacja Twoim ID
+          fbq('init', '3412865108961069');
+          // Pierwszy PageView leci od razu przy ładowaniu
+          fbq('track', 'PageView');
+        `,
             }}
         />
     );
 };
 
-// 2. Główny komponent eksportowany na zewnątrz
-// Owija logikę w Suspense, co naprawia błąd budowania strony 404
 export const FacebookPixel = () => {
     return (
         <>
+            {/* Suspense jest konieczny dla useSearchParams w Next.js 15+ */}
             <Suspense fallback={null}>
                 <PixelEvents />
             </Suspense>
