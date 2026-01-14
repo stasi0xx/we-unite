@@ -31,7 +31,7 @@ export const Footer = () => {
                     <div className="flex items-center gap-4 mt-4">
                         <SocialLink href="#" icon={<Twitter size={18} />} />
                         <SocialLink href="#" icon={<Linkedin size={18} />} />
-                        <SocialLink href="#" icon={<Facebook size={18} />} />
+                        <SocialLink href="https://www.facebook.com/janek.hofman" icon={<Facebook size={18} />} />
                         <SocialLink href="https://www.instagram.com/weunite.pl/" icon={<Instagram size={18} />} />
                     </div>
                 </div>

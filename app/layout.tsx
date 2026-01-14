@@ -54,6 +54,15 @@ export const metadata: Metadata = {
         title: "WeUnite | Twoja sprzedaż na autopilocie",
         description: "AI odpisuje klientom w 3 sekundy. Wdrożenie już od 1 zł. Sprawdź nasze rozwiązania.",
         siteName: "WeUnite",
+        icons: {
+            icon: [
+                { url: '/icon.png', type: 'image/png' },
+                { url: '/favicon.ico', sizes: 'any' } // fallback dla legacy
+            ],
+            apple: [
+                { url: '/apple-icon.png', type: 'image/png' }
+            ],
+        },
         images: [
             {
                 url: "/og-image.jpg", // Warto dodać plik og-image.jpg (1200x630px) do folderu public
