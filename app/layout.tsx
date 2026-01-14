@@ -35,7 +35,16 @@ export const metadata: Metadata = {
         default: "WeUnite | Automatyzacja Sprzedaży AI & Strony WWW",
         template: "%s | WeUnite" // To sprawia, że podstrony będą miały format: "Tytuł Podstrony | WeUnite"
     },
-    description: "Zwiększ sprzedaż dzięki AI Social Responderom (wdrożenie od 1 zł) i inteligentnym stronom WWW. Automatyzacja marketingu i biznesu. Sprawdź ofertę.",
+    description: "Kompleksowa obsługa marketingowa Twojej strony internetowej oraz mediów społecznościowych. W branży od ponad 8 lat.",
+    icons: {
+        icon: [
+            { url: '/icon.png', type: 'image/png' },
+            { url: '/favicon.ico', sizes: 'any' } // fallback dla legacy
+        ],
+        apple: [
+            { url: '/apple-icon.png', type: 'image/png' }
+        ],
+    },
     keywords: [
         "automatyzacja ai",
         "social media responder",
@@ -52,17 +61,9 @@ export const metadata: Metadata = {
         locale: "pl_PL",
         url: baseUrl,
         title: "WeUnite | Twoja sprzedaż na autopilocie",
-        description: "AI odpisuje klientom w 3 sekundy. Wdrożenie już od 1 zł. Sprawdź nasze rozwiązania.",
+        description: "Kompleksowa obsługa marketingowa Twojej strony internetowej oraz mediów społecznościowych. W branży od ponad 8 lat.",
         siteName: "WeUnite",
-        icons: {
-            icon: [
-                { url: '/icon.png', type: 'image/png' },
-                { url: '/favicon.ico', sizes: 'any' } // fallback dla legacy
-            ],
-            apple: [
-                { url: '/apple-icon.png', type: 'image/png' }
-            ],
-        },
+
         images: [
             {
                 url: "/og-image.jpg", // Warto dodać plik og-image.jpg (1200x630px) do folderu public
