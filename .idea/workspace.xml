@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="production ready">
-      <change beforePath="$PROJECT_DIR$/components/FacebookPixel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FacebookPixel.tsx" afterDir="false" />
+    <list default="true" id="8c2d3b15-555c-4564-a5ce-6f3b7deee8ef" name="Changes" comment="WeUnite publikacja">
+      <change afterPath="$PROJECT_DIR$/components/Testimonials.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/clients/creo-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/clients/images.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/clients/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/TrustedBy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TrustedBy.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +137,9 @@
       <workItem from="1767035146021" duration="20000" />
       <workItem from="1767110684068" duration="3632000" />
       <workItem from="1767432052633" duration="10000" />
-      <workItem from="1767706597286" duration="476000" />
+      <workItem from="1767706597286" duration="904000" />
+      <workItem from="1767784700008" duration="5000" />
+      <workItem from="1768412529147" duration="2784000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -306,7 +317,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767706926148</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Pixel Meta">
+      <option name="closed" value="true" />
+      <created>1767707092386</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1767707092386</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Pixel Meta">
+      <option name="closed" value="true" />
+      <created>1767707499339</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1767707499339</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +355,8 @@
     <MESSAGE value="seo repairs" />
     <MESSAGE value="google analytics" />
     <MESSAGE value="production ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="production ready" />
+    <MESSAGE value="Pixel Meta" />
+    <MESSAGE value="WeUnite publikacja" />
+    <option name="LAST_COMMIT_MESSAGE" value="WeUnite publikacja" />
   </component>
 </project>

@@ -1,13 +1,13 @@
 "use client";
 
 import React from 'react';
-import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
-import { cn } from "@/lib/utils";
-import { Spotlight } from "@/components/ui/spotlight-new";
-import { Marquee } from "@/components/ui/marquee";
-import { Database, Zap, Bot, Layers, Server, Code2, Globe, Cpu } from "lucide-react";
+import {InteractiveGridPattern} from "@/components/ui/interactive-grid-pattern";
+import {cn} from "@/lib/utils";
+import {Spotlight} from "@/components/ui/spotlight-new";
+import {Marquee} from "@/components/ui/marquee";
+import {Bot, Code2, Cpu, Database, Globe, Layers, Server, Zap} from "lucide-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import Link from "next/link";
 
 const techStack = [
@@ -73,21 +73,19 @@ const Hero = () => {
                     transition={{ delay: 0.2, duration: 0.8 }}
                     className="text-3xl md:text-7xl font-bold tracking-tight text-white mt-2 mb-4 drop-shadow-2xl max-w-4xl leading-[1.1]"
                 >
-                    Twoja Sprzedaż <br />
+                    Twój
                     <span className="
         relative
         text-transparent bg-clip-text
         bg-gradient-to-b from-zinc-300 via-white to-zinc-500
         drop-shadow-[0_0_2px_rgba(255,255,255,0.3)]
-    ">
-        na Autopilocie
+    "> Spotlight
     </span>
                 </motion.h1>
                 {/* OPIS */}
                 <p className="text-base md:text-xl text-zinc-300 font-sans max-w-2xl leading-relaxed text-center md:mb-8 mb-3">
-                    Wdróż <strong className="text-white">AI Social Respondera już od 5 PLN</strong>.
-                    Odpisuj klientom w 3 sekundy, 24/7 na Instagramie i FB.
-                    Tworzymy inteligentne strony WWW i systemy, które zarabiają, gdy Ty śpisz.
+                    Kompleksowa <strong className="text-white">OBSŁUGA MARKETINGOWA </strong> Twojej strony internetowej oraz mediów społecznościowych.
+                    W branży od <strong className="text-white">ponad 8 lat</strong>.
                 </p>
 
                 {/* PRZYCISKI */}
@@ -103,7 +101,7 @@ const Hero = () => {
             active:scale-95 transition-all duration-300 ease-out
             cursor-pointer z-10
         ">
-                            <span className="relative z-10 drop-shadow-sm">Wdróż bota za 5 PLN</span>
+                            <span className="relative z-10 drop-shadow-sm">Bezpłatna Konsultacja</span>
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shine_1s_ease-in-out_infinite]" />
                         </button>
                     </Link>
@@ -111,7 +109,7 @@ const Hero = () => {
                     {/* Drugi przycisk (opcjonalny, np. do cennika stron) */}
                     <Link href="/oferta/inteligentne-strony">
                         <button className="px-8 py-3 md:px-10 md:py-4 rounded-full font-semibold text-zinc-300 hover:text-white transition-colors border border-white/10 hover:bg-white/5">
-                            Szukam strony WWW
+                            Oferta
                         </button>
                     </Link>
                 </div>

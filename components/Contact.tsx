@@ -61,7 +61,7 @@ export const Contact = () => {
                         Skontaktuj się z nami
                     </h2>
                     <p className="text-zinc-400">
-                        Wypełnij formularz, a my wrócimy z planem automatyzacji dla Ciebie.
+                        Wypełnij formularz, a my wrócimy z gotową Strategią.
                     </p>
                 </div>
 

@@ -5,6 +5,7 @@ import {Contact} from "@/components/Contact";
 import {Footer} from "@/components/Footer";
 import {TrustedBy} from "@/components/TrustedBy";
 import {FAQ} from "@/components/FAQ";
+import {Testimonials} from "@/components/Testimonials";
 
 export default function Home() {
     return (
@@ -28,7 +29,9 @@ export default function Home() {
                 {/* Tutaj wrzucasz wszystkie kolejne sekcje */}
                 <FeaturesBento />
                 <TrustedBy />
+
                 <FAQ />
+
                 <Contact />
                 {/* Przykładowy footer/odstęp, żebyś widział efekt do końca */}
                 <Footer />

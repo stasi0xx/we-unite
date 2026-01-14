@@ -10,6 +10,10 @@ const companies = [
         logo: "/clients/logo1.webp", // Ścieżka do pliku w public/clients
     },
     {
+        name: "Klub Piłkarski Gedania",
+        logo: "/clients/logo.png",
+    },
+    {
         name: "Polska Akademia Dzieci",
         logo: "/clients/logo2.webp",
     },
@@ -26,8 +30,16 @@ const companies = [
         logo: "/clients/finanse-i-ksiegowosc.png",
     },
     {
+        name: "Creo Gednia",
+        logo: "/clients/creo-1.jpg",
+    },
+    {
         name: "Akademia rozwoju osobistego Columbus",
         logo: "/clients/akademia-rozwoju-osobistego-columbus.jpeg",
+    },
+    {
+        name: "Przedszkole Gedania",
+        logo: "/clients/images.png",
     },
 
 ];
