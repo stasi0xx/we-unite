@@ -71,9 +71,9 @@ export const OFFERS: Record<string, Offer> = {
             
             Nie używamy gotowców z WordPressa, które "zamulają" po miesiącu. Budujemy w technologii Next.js 16+ (tej samej, z której korzysta Netflix czy HBO).
             
-            **Nasze pakiety:**
-            🟢 **Start (1500 PLN):** Ultraszybka strona wizytówka. Idealna dla usług lokalnych. Nowoczesny design, RWD, optymalizacja pod Google.
-            🟣 **Pro (3500 PLN):** "Inteligentna Strona". Zintegrowana z CRM, z wbudowanym systemem rezerwacji, blogiem i pełną analityką zachowań użytkownika.
+            Nasze pakiety:
+            🟢 Start (1500 PLN): Ultraszybka strona wizytówka. Idealna dla usług lokalnych. Nowoczesny design, RWD, optymalizacja pod Google.
+            🟣 Pro (5000 PLN): "Inteligentna Strona". Zintegrowana z CRM, z wbudowanym systemem rezerwacji, blogiem i pełną analityką zachowań użytkownika.
         `,
         icon: Globe,
         benefits: [
